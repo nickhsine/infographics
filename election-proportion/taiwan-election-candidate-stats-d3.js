@@ -33,7 +33,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                         'box-shadow': '0 1px 2px 0 rgba(0,0,0,0.4)'
                     });
 
-                    var image = d.photo ? '<img height="80px" src="' + d.photo + '"></img>' : '';
+                    var image = d.photo ? '<img style="width:auto" height="80px" src="' + d.photo + '"></img>' : '';
                     var name = '<div style="font-size:24px; font-weight:500">' + d.name + '</div>';
                     var party = '<div class="party-indicator"><div class="party-circle" style="background-color:' +getPartyColor(d.party) +'"></div><span>' + d.party + '</span></div>'
                     var district = '<div>' + d.city +'</div>';
@@ -41,6 +41,10 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                     var div = '<div class="election-container" style="padding:15px;">' + image + '<div style="display:inline-block;margin-left:10px;">' + name + party + district  + '</div></div>'
                     tooltipDiv.html(div);
                 })
+                .on('mouseout.tooltip', function() {
+                    // remove tooltip
+                    tooltipDiv.remove();
+                });
         }
 
         tooltip.attr = function(_x) {
