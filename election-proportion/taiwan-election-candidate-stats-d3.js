@@ -195,7 +195,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                 return d.party;
             })
             .rollup(function(d) {
-                return (d.length / data.length).toFixed(2);
+                return parseFloat((d.length / data.length).toFixed(2));
             })
             .map(data);
     }
@@ -212,7 +212,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                         count++;
                     }
                 });
-                return (count / v.length).toFixed(2);
+                return parseFloat((count / v.length).toFixed(2));
             })
             .map(data);
     }
@@ -225,7 +225,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
             }
         });
         return {
-            congress: (count / data.length).toFixed(2)
+            congress: parseFloat((count / data.length).toFixed(2))
         };
     }
 
