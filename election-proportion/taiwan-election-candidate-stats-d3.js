@@ -225,7 +225,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
             }
         });
         return {
-            congress: (count / data.length).toFixed(2);
+            congress: (count / data.length).toFixed(2)
         };
     }
 
