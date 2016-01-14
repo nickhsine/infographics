@@ -41,10 +41,6 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                     var div = '<div class="election-container" style="padding:15px;">' + image + '<div style="display:inline-block;margin-left:10px;">' + name + party + district  + '</div></div>'
                     tooltipDiv.html(div);
                 })
-                .on('mouseout.tooltip', function() {
-                    // remove tooltip
-                  tooltipDiv.remove();
-                })
         }
 
         tooltip.attr = function(_x) {
