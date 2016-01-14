@@ -195,7 +195,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                 return d.party;
             })
             .rollup(function(d) {
-                return parseFloat((d.length / data.length).toFixed(2));
+                return (d.length / data.length).toFixed(2);
             })
             .map(data);
     }
@@ -212,7 +212,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
                         count++;
                     }
                 });
-                return parseFloat((count / v.length).toFixed(2));
+                return (count / v.length).toFixed(2);
             })
             .map(data);
     }
@@ -487,7 +487,7 @@ if(t==e.dx){for((r||s>e.dy)&&(s=e.dy);++i<a;)u=n[i],u.x=o,u.y=c,u.dy=s,o+=u.dx=M
             }
 
             var renderPercentage = function(data, party, category) {
-                document.getElementById(category + '-' + party + '-pt').innerHTML = data;
+                document.getElementById(category + '-' + party + '-pt').innerHTML = parseFloat(data).toFixed(2);
             }
 
             function clickGenderButton(data, gender) {
